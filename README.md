@@ -41,15 +41,15 @@ pip install pandas numpy matplotlib scikit-learn
 ### **Running the Project**
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/breast-cancer-classification.git
-cd breast-cancer-classification
+git clone Breast-Cancer-Detection.git
+cd Breast-Cancer-Detection.git
 ```
 
 2. Place the dataset in the project directory:
 ```
 breast-cancer-classification/
 ├── cell_samples.csv           # Dataset
-├── breast_cancer_classifier.ipynb  # Main notebook
+├── Cancer_Detection.ipynb  # Main notebook
 ├── README.md                  # Documentation
 └── requirements.txt           # Dependencies
 ```
@@ -142,7 +142,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 breast-cancer-classification/
 │
 ├── cell_samples.csv                     # Original dataset
-├── breast_cancer_classifier.ipynb       # Main analysis notebook
+├── Cancer_Detection.ipynb       # Main analysis notebook
 ├── README.md                            # Documentation
 ├── requirements.txt                     # Python dependencies
 ├── models/                              # Trained models
@@ -237,9 +237,6 @@ Contributions are welcome! Please follow these steps:
 4. **Push** to the branch (`git push origin feature/AmazingFeature`)
 5. **Open** a Pull Request
 
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
 
 ## ⚠️ Medical Disclaimer
 
@@ -254,9 +251,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## ✉️ Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - email@example.com
+[Parsa Khaghani - email@example.com](https://www.linkedin.com/in/parsa-khaghani-a22847326/)
 
-Project Link: [https://github.com/yourusername/breast-cancer-classification](https://github.com/yourusername/breast-cancer-classification)
+Project Link: https://github.com/nowherewalrus/Breast-Cancer-Detection.git
 
 ## 🙏 Acknowledgments
 
