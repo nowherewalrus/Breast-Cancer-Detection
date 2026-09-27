@@ -145,20 +145,7 @@ breast-cancer-classification/
 ├── Cancer_Detection.ipynb       # Main analysis notebook
 ├── README.md                            # Documentation
 ├── requirements.txt                     # Python dependencies
-├── models/                              # Trained models
-│   ├── svm_model.pkl
-│   └── scaler.pkl
-├── visuals/                             # Generated plots
-│   ├── confusion_matrix.png
-│   ├── scatter_plot.png
-│   └── feature_importance.png
-├── reports/                             # Evaluation reports
-│   ├── classification_report.txt
-│   └── performance_metrics.json
-└── src/                                 # Source code modules
-    ├── preprocessing.py
-    ├── visualization.py
-    └── evaluation.py
+
 ```
 
 ## 🔧 Customization
@@ -183,23 +170,6 @@ for kernel in kernels:
     # Train and evaluate each kernel
 ```
 
-## 📈 Performance Improvement Tips
-
-### **1. Feature Engineering**
-- Create composite features from existing ones
-- Apply PCA for dimensionality reduction
-- Feature selection using mutual information
-
-### **2. Model Enhancement**
-- Hyperparameter tuning with GridSearchCV
-- Ensemble methods (SVM + Random Forest)
-- Cross-validation for robust evaluation
-
-### **3. Medical-Specific Improvements**
-- Cost-sensitive learning (higher penalty for false negatives)
-- ROC curve analysis for different thresholds
-- Calibration of probability outputs
-
 ## 🎯 Use Cases
 
 ### **Medical Applications**
@@ -212,31 +182,6 @@ for kernel in kernels:
 1. **Feature Analysis**: Identify most discriminative cytological features
 2. **Algorithm Comparison**: Benchmark against other ML models
 3. **Dataset Augmentation**: Generate synthetic cell samples
-
-## 🔄 Future Enhancements
-
-### **Planned Features**
-- [ ] **Web Interface**: Streamlit dashboard for predictions
-- [ ] **API Endpoint**: REST API for integration with hospital systems
-- [ ] **Explainable AI**: SHAP/LIME for model interpretability
-- [ ] **Multi-class Classification**: Subtype classification of malignancies
-
-### **Technical Improvements**
-- [ ] **Hyperparameter Optimization**: Bayesian optimization
-- [ ] **Feature Importance**: Permutation importance analysis
-- [ ] **Model Deployment**: Docker container with FastAPI
-- [ ] **Continuous Learning**: Model updates with new data
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/AmazingFeature`)
-3. **Commit** your changes (`git commit -m 'Add AmazingFeature'`)
-4. **Push** to the branch (`git push origin feature/AmazingFeature`)
-5. **Open** a Pull Request
-
 
 ## ⚠️ Medical Disclaimer
 
@@ -254,50 +199,6 @@ Contributions are welcome! Please follow these steps:
 [Parsa Khaghani - email@example.com](https://www.linkedin.com/in/parsa-khaghani-a22847326/)
 
 Project Link: https://github.com/nowherewalrus/Breast-Cancer-Detection.git
-
-## 🙏 Acknowledgments
-
-- University of Wisconsin Hospitals for the dataset
-- Scikit-learn development team
-- Medical researchers in oncology and pathology
-- Open source community contributors
-
-## 🚀 Quick Start
-
-### **For Basic Usage:**
-```python
-# Load and preprocess
-cell_df = pd.read_csv('cell_samples.csv')
-cell_df = cell_df[cell_df["BareNuc"] != "?"]
-
-# Train model
-svm_model = SVC(kernel="rbf")
-svm_model.fit(X_train, y_train)
-
-# Make prediction
-prediction = svm_model.predict([patient_features])
-```
-
-### **For Production Deployment:**
-```python
-# Save model
-import joblib
-joblib.dump(svm_model, 'breast_cancer_svm_model.pkl')
-joblib.dump(scaler, 'feature_scaler.pkl')
-
-# Load and predict
-model = joblib.load('breast_cancer_svm_model.pkl')
-scaler = joblib.load('feature_scaler.pkl')
-scaled_features = scaler.transform([new_sample])
-prediction = model.predict(scaled_features)
-```
-
----
-
-**Note**: The warning about `numexpr` version is non-critical. To resolve:
-```bash
-pip install --upgrade numexpr
-```
 
 ---
 
